@@ -1,13 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>nhung World</title>
-    <link type="text/css" rel ="stylesheet" href="styles/style.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+
 </head>
+
 <body>
-    <h1>This is a test</h1>
+    <div class="container">
+
+        <h2>Javascript Homework</h2>
+        <h3> The program output</h3>
+        <hr>
+        <p id='output1'></p>
+        <p id='output2'></p>
+        <p id='output3'></p>
+        <p id='output4'></p>
+        <p id='output5'></p>
+        <p id='output6'></p>
+        <hr>
+
+        <!-- <script src='styles/javascript.js'></script> -->
+
+        <script>
+
+            const start = prompt('start: ')
+            const end = prompt('End: ')
+            const step = prompt('step: ')
+
+            document.getElementById('output1').innerHTML = 'Start number:' + start;
+            document.getElementById('output2').innerHTML = 'End number: ' + end;
+            document.getElementById('output3').innerHTML = 'Step number: ' + step;
+
+            function getArray(start, end, step) {
+                let sNum = parseInt(start)
+                let eNum = parseInt(end)
+                let stNum = parseInt(step)
+
+                const myArray = [];
+
+                if (sNum < eNum) {
+                    while (sNum <= eNum) {
+                        myArray.push(parseInt(sNum))
+                        sNum += stNum
+                    }
+                } else if (sNum > eNum) {
+                    while (sNum >= eNum) {
+                        myArray.push(parseInt(sNum))
+                        sNum += stNum
+                    }
+                }
+
+
+                return myArray;
+            }
+
+            function getSum(arr) {
+
+                let sum = 0
+               
+                for (let i = 0; i < arr.length; i++) {
+                    sum += parseFloat(arr[i])
+                }
+
+                return sum
+            }
+
+             function getBinary(myArray) {
+
+                let nArr = myArray
+
+                let newArray = [];
+
+                for (let i = 0; i < nArr.length; i++) {
+
+                    newArray.push(Math.floor(parseInt(nArr[i].toString(2))))
+              }
+
+         }
+
+
+            document.getElementById('output4').innerHTML = 'Array: ' + getArray(start, end, step);
+            document.getElementById('output5').innerHTML = 'Sum: ' + getSum(getArray(start, end, step));
+            document.getElementById('output6').innerHTML = 'Binary: ' + getBinary(getArray(start, end, step));
+        </script>
+
+
+    </div>
 </body>
+
 </html>
