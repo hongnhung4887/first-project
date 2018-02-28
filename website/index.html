@@ -41,7 +41,7 @@
                 let eNum = parseInt(end)
                 let stNum = parseInt(step)
 
-                const myArray = [];
+                let myArray = []
 
                 if (sNum < eNum) {
                     while (sNum <= eNum) {
@@ -67,22 +67,17 @@
                     sum += parseFloat(arr[i])
                 }
 
-                return sum
+                return sum;
             }
 
-             function getBinary(myArray) {
+           function getBinary(myArray) {
+            let newArray = [];
+            for (let i = 0; i <= myArray.length - 1; i++) {
+                newArray.push(Math.abs(parseInt(myArray[i].toString(2))));
+            }
 
-                let nArr = myArray
-
-                let newArray = [];
-
-                for (let i = 0; i < nArr.length; i++) {
-
-                    newArray.push(Math.floor(parseInt(nArr[i].toString(2))))
-              }
-
-         }
-
+            return newArray;
+        }
 
             document.getElementById('output4').innerHTML = 'Array: ' + getArray(start, end, step);
             document.getElementById('output5').innerHTML = 'Sum: ' + getSum(getArray(start, end, step));
