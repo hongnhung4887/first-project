@@ -37,10 +37,10 @@
 
                     for (let i = 0; i < gotEmail.length; i++) {
                         eOne = gotEmail[i].email;
-                        eArray.push('"'+eOne+'"');
+                        eArray.push('"'+ eOne +'"');
                     }
                     eArray.sort()
-                    document.getElementById('output1').innerHTML = eArray;
+                    document.getElementById('output1').innerHTML = 'user email:' +  eArray;
 
 
 
@@ -94,7 +94,10 @@
 			return resolve;
 		}).then((resolve) =>{
 		
-			document.getElementById('output2').innerHTML = resolve;
+            document.getElementById('output2').innerHTML = 'User usernames from fetch:'+ 
+             
+
+resolve;
 		})
 	
     
