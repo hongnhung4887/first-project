@@ -26,6 +26,7 @@ document.getElementById('output4').innerHTML = 'Array: ' + myArray;
 
 
 
+
 //     //    const message = prompt('Enter a message')
 //     //    alert('Your input is: ' + message)
 //     //    const output = document.getElementById("output")
@@ -37,3 +38,8 @@ document.getElementById('output4').innerHTML = 'Array: ' + myArray;
 
 // function getBinary(){}
 
+const strat= prompt ('enter start')
+const end= prompt ('enter start end')
+const step=Prompt('enter step')
+document.getElementById('output1').innerHTML = 'Start number:' + start;
+funtions getArray (start, end, step)
